@@ -1,29 +1,34 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 const emit = defineEmits<{
   (e: 'create', payload: { title: string; detail: string }): void;
 }>();
 
-const title = $ref<string>('');
-const detail = $ref<string>('');
+const title = ref<string>('');
+const detail = ref<string>('');
 
 function create() {
-  if (!title.trim()) return;
-  emit('create', { title: title.trim(), detail: detail.trim() });
-  title = '';
-  detail = '';
+  if (!title.value.trim()) return;
+  emit('create', { 
+    title: title.value.trim(), 
+    detail: detail.value.trim() 
+  });
+  title.value = '';
+  detail.value = '';
 }
 </script>
 
 <template>
   <div class="flex gap-3 items-center">
     <input
-      v-model="title"
+      v-model="title.value"
       type="text"
       placeholder="Type Title Of Task"
       class="h-10 w-full max-w-md rounded-xl border border-zinc-300/70 bg-white px-3 text-sm outline-none focus:ring-2 focus:ring-emerald-400"
     />
     <input
-      v-model="detail"
+      v-model="detail.value"
       type="text"
       placeholder="Detail Of Your Task"
       class="h-10 w-full max-w-md rounded-xl border border-zinc-300/70 bg-white px-3 text-sm outline-none focus:ring-2 focus:ring-emerald-400"

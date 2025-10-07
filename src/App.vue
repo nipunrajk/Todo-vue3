@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import CalendarMini from '@/components/CalendarMini.vue';
-import Toolbar from '@/components/Toolbar.vue';
-import FiltersBar from '@/components/FiltersBar.vue';
-import TaskCard from '@/components/TaskCard.vue';
-import StatCard from '@/components/StatCard.vue';
-import AvatarRow from '@/components/AvatarRow.vue';
+import CalendarMini from './components/CalendarMini.vue';
+import Toolbar from './components/Toolbar.vue';
+import FiltersBar from './components/FiltersBar.vue';
+import TaskCard from './components/TaskCard.vue';
+import StatCard from './components/StatCard.vue';
+import AvatarRow from './components/AvatarRow.vue';
+import Header from './components/AppHeader.vue';
 import type { Task } from '@/types';
 
 const tasks = ref<Task[]>([
@@ -107,16 +108,17 @@ function loadMore() {
 </script>
 
 <template>
-  <div class="mx-auto max-w-[1120px] px-4 py-6">
-    <h1 class="mb-6 text-5xl font-black leading-tight text-zinc-800">
+  <Header />
+  <div class="mx-5 py-6">
+    <h1 class="mb-6 text-heading font-roboto font-semibold text-zinc-800">
       Hello, Aqeel,
-      <span class="font-semibold text-zinc-500">Start planning today</span>
+      <span class="text-zinc-500">Start planning today</span>
     </h1>
 
     <div class="grid grid-cols-1 gap-6 md:grid-cols-[320px,1fr]">
       <!-- Left: Calendar + Stats + Banner -->
       <div class="space-y-4">
-        <CalendarMini />
+        <CalendarMini :tasks="tasks" />
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
           <StatCard
             label="COMPLETED TASKS"
