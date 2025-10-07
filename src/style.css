@@ -1,1 +1,8 @@
 @import 'tailwindcss';
+
+@theme {
+  --spacing-3px: 3px;
+  --spacing-15px: 15px;
+
+  --color-custom-light: #f2eaea;
+}
