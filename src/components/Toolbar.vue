@@ -22,22 +22,25 @@ function create() {
 <template>
   <div class="flex gap-3 items-center">
     <input
-      v-model="title.value"
+      v-model="title"
       type="text"
       placeholder="Type Title Of Task"
-      class="h-10 w-full max-w-md rounded-xl border border-zinc-300/70 bg-white px-3 text-sm outline-none focus:ring-2 focus:ring-emerald-400"
+      class="h-12 flex-1 rounded-xl border border-zinc-300/70 bg-blue-50/50 px-4 text-sm placeholder:text-zinc-500 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all"
+      @keydown.enter="create"
     />
     <input
-      v-model="detail.value"
+      v-model="detail"
       type="text"
       placeholder="Detail Of Your Task"
-      class="h-10 w-full max-w-md rounded-xl border border-zinc-300/70 bg-white px-3 text-sm outline-none focus:ring-2 focus:ring-emerald-400"
+      class="h-12 flex-1 rounded-xl border border-zinc-300/70 bg-purple-50/50 px-4 text-sm placeholder:text-zinc-500 outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-100 transition-all"
+      @keydown.enter="create"
     />
     <button
-      class="inline-flex h-10 items-center gap-2 rounded-xl border border-emerald-500 bg-emerald-600 px-4 font-medium text-white shadow hover:bg-emerald-700"
+      class="h-12 w-12 flex items-center justify-center rounded-xl bg-emerald-500 text-white font-bold text-xl hover:bg-emerald-600 transition-colors shadow-lg"
       @click="create"
+      title="Add Task"
     >
-      <span class="text-lg leading-none">＋</span> Add
+      +
     </button>
   </div>
 </template>

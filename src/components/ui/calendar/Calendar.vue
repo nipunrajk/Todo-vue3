@@ -49,7 +49,7 @@ function isWeekendDay(dayIndex: number): boolean {
   <CalendarRoot
     v-slot="{ grid, weekDays }"
     data-slot="calendar"
-    :class="cn('p-3', props.class)"
+    :class="cn('p-3 max-w-max', props.class)"
     v-bind="forwarded"
   >
     <CalendarHeader>
