@@ -5,23 +5,29 @@ defineOptions({
 </script>
 
 <template>
-  <header class="bg-custom-light px-15px py-3px shadow-md">
+  <header class="bg-custom-light px-11 py-5 shadow-md">
     <div class="container mx-auto flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <div
-          class="w-10 h-10 bg-red-300 bg-opacity-50 rounded-full flex items-center justify-center text-red-700 font-bold text-xl select-none"
-        >
-          r
+      <div class="flex items-center space-x-3 font-island text-6xl">
+        <div class="relative h-28 w-28 mr-4">
+          <div
+            class="absolute -left-3 -top-3 h-full w-full rounded-full bg-salmon-pink-50"
+          ></div>
+
+          <div
+            class="relative z-10 flex h-full w-full items-center justify-center rounded-full bg-salmon-pink"
+          >
+            <span class="font-black text-black">V</span>
+          </div>
         </div>
-        <span class="text-gray-800 text-3xl font-script italic">Vista Lab</span>
+        <span class="text-gray-800">Vista Lab</span>
       </div>
 
       <div class="flex items-center">
-        <!-- <img
-          src="@/assets/profile.png"
+        <img
+          src="/profile.png"
           alt="User Profile"
-          class="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm cursor-pointer"
-        /> -->
+          class="h-28 w-28 rounded-full object-cover shadow-sm cursor-pointer"
+        />
       </div>
     </div>
   </header>
