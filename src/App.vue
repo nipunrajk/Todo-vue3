@@ -79,7 +79,7 @@ function editTask(id: number) {
 
 <template>
   <Header />
-  <div class="mx-5 py-6">
+  <div class="mx-14 my-5 py-6">
     <h1 class="mb-6 text-heading font-roboto font-semibold text-zinc-800">
       Hello, Aqeel,
       <span class="text-zinc-500">Start planning today</span>
