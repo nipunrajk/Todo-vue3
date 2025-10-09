@@ -156,7 +156,7 @@ function handleRemove(id: number) {
         </div>
       </div>
     </div>
-    
+
     <!-- Stats Section Below -->
     <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
       <StatCard
