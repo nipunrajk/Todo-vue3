@@ -21,6 +21,10 @@
   --color-salmon-pink-50: rgba(248, 119, 119, 0.5);
   --color-red: #f23834;
   --color-charcoal-gray: #63605f;
+  --color-silver-gray: rgba(177, 177, 177, 0.4);
+  --color-input: #dbe2ef;
+  --color-silver-gray: #7b7b7b;
+  --color-green-sage: #5c9967;
 
   --font-roboto: 'Roboto Flex', sans-serif;
   --font-island: 'Island Moments', cursive;

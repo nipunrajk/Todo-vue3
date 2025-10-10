@@ -122,7 +122,6 @@ function handleRemove(id: number) {
 
       <!-- Column 2: Task Management Controls (3 units) -->
       <div class="lg:col-span-3 space-y-3">
-        <!-- Toolbar -->
         <div>
           <Toolbar @create="handleCreate" />
         </div>
