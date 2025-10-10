@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import CalendarMini from './components/CalendarMini.vue';
-import Header from './components/AppHeader.vue';
+import Header from './components/AppHeader.vue'; 
 import type { Task } from '@/types';
 
 const tasks = ref<Task[]>([
@@ -80,9 +80,11 @@ function editTask(id: number) {
 <template>
   <Header />
   <div class="mx-14 my-5 py-6">
-    <h1 class="mb-6 text-heading font-roboto font-semibold text-zinc-800">
-      Hello, Aqeel,
-      <span class="text-zinc-500">Start planning today</span>
+    <h1
+      class="mb-6 ps-16 font-roboto text-6xl font-semibold text-black"
+    >
+      Hello Aqeel,
+      <span class="text-charcoal-gray">Start planning today</span>
     </h1>
 
     <div class="space-y-6">

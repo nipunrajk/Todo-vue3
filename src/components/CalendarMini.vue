@@ -96,26 +96,26 @@ function handleRemove(id: number) {
 </script>
 
 <template>
-  <div class="rounded-3xl bg-white p-4 shadow-lg">
+  <div class="rounded-3xl bg-card-light p-8 shadow-lg">
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 items-start">
       <!-- Column 1: Date Header + Calendar (1 unit) -->
       <div class="lg:col-span-1 space-y-3">
         <div>
-          <div class="font-island font-normal text-5xl text-red-400">
+          <div class="font-island font-normal text-6xl text-red-400 mb-1">
             {{ weekday }}
           </div>
-          <div class="mt-1 text-3xl font-abhaya font-extrabold">
+          <div class="mt-1 text-5xl font-abhaya font-extrabold">
             {{ String(day).padStart(2, '0') }}, {{ monthName }} {{ year }}
           </div>
         </div>
 
         <!-- Calendar -->
-        <div>
+        <div class="w-full max-w-full overflow-hidden">
           <Calendar
             v-model="value"
             :weekday-format="'short'"
             :dates-with-tasks="datesWithTasks"
-            class="rounded-md border"
+            class="rounded-md bg-white w-11/12 max-w-full"
           />
         </div>
       </div>

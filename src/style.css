@@ -5,7 +5,7 @@
 
 @import 'tailwindcss';
 
-@import "tw-animate-css";
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -13,12 +13,14 @@
   --spacing-3px: 3px;
   --spacing-15px: 15px;
 
-  --text-heading: 1.39rem;
+  --text-heading: 1.39rem; /*may remove*/
 
   --color-custom-light: #f2eaea;
-  --color-card: #faf7f2;
+  --color-card-light: #faf7f2;
   --color-salmon-pink: #f87777;
-  --color-red: #F23834
+  --color-salmon-pink-50: rgba(248, 119, 119, 0.5);
+  --color-red: #f23834;
+  --color-charcoal-gray: #63605f;
 
   --font-roboto: 'Roboto Flex', sans-serif;
   --font-island: 'Island Moments', cursive;
@@ -142,4 +144,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+body {
+  @apply bg-white;
 }
