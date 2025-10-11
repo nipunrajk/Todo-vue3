@@ -122,12 +122,12 @@ function handleRemove(id: number) {
 
       <!-- Column 2: Task Management Controls (3 units) -->
       <div class="lg:col-span-3 space-y-3">
-        <div>
+        <div class="mb-5">
           <Toolbar @create="handleCreate" />
         </div>
 
         <!-- Filters -->
-        <div>
+        <div class="mb-5">
           <FiltersBar v-model="filters" />
         </div>
 
