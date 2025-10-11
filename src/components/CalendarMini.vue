@@ -96,7 +96,7 @@ function handleRemove(id: number) {
 </script>
 
 <template>
-  <div class="rounded-3xl bg-card-light p-8 shadow-lg">
+  <div class="rounded-3xl bg-card-light p-8 shadow-lg pe-20">
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 items-start">
       <!-- Column 1: Date Header + Calendar (1 unit) -->
       <div class="lg:col-span-1 space-y-3">
@@ -133,7 +133,7 @@ function handleRemove(id: number) {
 
         <!-- Task Cards -->
         <div>
-          <div class="grid grid-cols-2 gap-3">
+          <div class="grid grid-cols-2 gap-8">
             <TaskCard
               v-for="t in paged"
               :key="t.id"
