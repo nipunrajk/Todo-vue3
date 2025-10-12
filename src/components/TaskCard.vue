@@ -30,27 +30,25 @@ function getPriorityColor(priority: string) {
     class="rounded-md p-4 shadow-sm border transition-all hover:shadow-md bg-linen"
   >
     <div class="flex items-start justify-between">
-      <div class="flex-1">
+      <div class="flex-1 font-inter">
         <div class="flex items-center gap-2 mb-2">
           <div
             :class="[
-              'text-base font-bold text-zinc-800',
-              props.task.completed ? 'line-through text-zinc-500' : '',
+              'font-bold text-lg  text-charcoal',
+              props.task.completed ? 'line-through' : '',
             ]"
           >
             {{ props.task.title }}
           </div>
         </div>
 
-        <p class="text-sm text-zinc-700 mb-3 leading-relaxed">
+        <p class="text-base w-6/12 font-jost text-gray-700 mb-4 font-normal">
           {{ props.task.detail }}
         </p>
 
-        <div class="flex items-center gap-4 text-xs text-zinc-600">
-          <div class="flex items-center gap-1">
-            <span class="font-semibold">Start date:</span>
-            <span class="px-2 py-1 rounded-md">{{ props.task.start }}</span>
-          </div>
+        <div class="flex items-center gap-1 text-charcoal font-bold">
+          <span class="font-bold">Start date:</span>
+          <span class="px-2 py-1 rounded-md">{{ props.task.start }}</span>
         </div>
       </div>
 
