@@ -9,13 +9,13 @@ defineProps<{
 <template>
   <div
     :class="[
-      'rounded-2xl p-4 shadow',
-      tone === 'brown' ? 'bg-rose-300/70 text-zinc-900' : 'bg-amber-300/70',
+      'rounded-2xl p-8 shadow text-charcoal font-inter',
+      tone === 'brown' ? 'bg-ash-rose' : 'bg-linen',
     ]"
   >
-    <div class="text-xs font-bold uppercase tracking-wide opacity-80">
+    <div class="text-base font-bold uppercase tracking-wide opacity-80">
       {{ label }}
     </div>
-    <div class="mt-1 text-3xl font-black tabular-nums">{{ value }}</div>
+    <div class="mt-1 font-black text-5xl">{{ value }}</div>
   </div>
 </template>

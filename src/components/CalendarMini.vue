@@ -157,7 +157,7 @@ function handleRemove(id: number) {
     </div>
 
     <!-- Stats Section Below -->
-    <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+    <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-4">
       <StatCard
         label="COMPLETED TASKS"
         :value="String(completedCount).padStart(2, '0')"
@@ -167,7 +167,7 @@ function handleRemove(id: number) {
         tone="brown"
         :value="String(pendingCount).padStart(2, '0')"
       />
-      <div class="sm:col-span-1">
+      <div class="sm:col-span-2">
         <AvatarRow />
       </div>
     </div>
