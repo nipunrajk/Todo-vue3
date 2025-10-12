@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import Checked from '@/assets/icons/Checked.vue';
-import Edit from '@/assets/icons/Edit.vue';
-import Delete from '@/assets/icons/Delete.vue';
 import type { Task } from '@/types';
+
+import { CircleCheck, Trash2, SquarePen } from 'lucide-vue-next';
 
 const props = defineProps<{ task: Task }>();
 const emit = defineEmits<{
@@ -55,17 +54,29 @@ function getPriorityColor(priority: string) {
         </div>
       </div>
 
-      <div class="flex flex-col gap-2 ml-4">
-        <button title="Toggle Complete" @click="emit('toggle', props.task.id)">
-          <Checked :width="60" :height="40" />
+      <div class="flex flex-col gap-3 ml-4">
+        <button
+          class="p-1 transition-all hover:scale-110 cursor-pointer"
+          title="Toggle Complete"
+          @click="emit('toggle', props.task.id)"
+        >
+          <CircleCheck :color="'var(--color-task-text)'" />
         </button>
 
-        <button title="Edit Task" @click="emit('edit', props.task.id)">
-          <Edit :height="20" :width="24" />
+        <button
+          class="p-1 transition-all hover:scale-110 cursor-pointer"
+          title="Edit Task"
+          @click="emit('edit', props.task.id)"
+        >
+          <SquarePen :color="'var(--color-task-text)'" />
         </button>
 
-        <button title="Delete Task" @click="emit('remove', props.task.id)">
-          <Delete :size="20" />
+        <button
+          class="p-1 transition-all hover:scale-110 cursor-pointer"
+          title="Delete Task"
+          @click="emit('remove', props.task.id)"
+        >
+          <Trash2 :color="'var(--color-task-text)'" />
         </button>
       </div>
     </div>
