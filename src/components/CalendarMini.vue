@@ -147,7 +147,7 @@ function handleRemove(id: number) {
           <!-- Load More Button -->
           <button
             v-if="paged.length < filtered.length"
-            class="mx-auto mt-3 block rounded-xl border-2 border-amber-400 px-4 py-2 font-medium text-amber-900 hover:bg-amber-50 transition-colors"
+            class="mx-auto mt-6 block rounded border-3 border-orange-amber px-9 py-4 font-inter font-bold text-task-text"
             @click="loadMore"
           >
             Load more

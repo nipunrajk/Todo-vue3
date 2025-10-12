@@ -26,11 +26,9 @@ function getPriorityColor(priority: string) {
 </script>
 
 <template>
-  <div
-    class="rounded-md p-4 shadow-sm border transition-all hover:shadow-md bg-linen"
-  >
+  <div class="rounded-md p-4 shadow-sm hover:shadow-md bg-linen">
     <div class="flex items-start justify-between">
-      <div class="flex-1 font-inter">
+      <div class="flex-1 font-inter flex flex-col">
         <div class="flex items-center gap-2 mb-2">
           <div
             :class="[
@@ -42,11 +40,13 @@ function getPriorityColor(priority: string) {
           </div>
         </div>
 
-        <p class="text-base w-6/12 font-jost text-gray-700 mb-4 font-normal">
+        <p
+          class="text-base w-6/12 font-jost text-gray-700 mb-4 font-normal min-h-[3rem] flex-1"
+        >
           {{ props.task.detail }}
         </p>
 
-        <div class="flex items-center gap-1 text-charcoal font-bold">
+        <div class="flex items-center gap-1 text-charcoal font-bold mt-auto">
           <span class="font-bold">Start date:</span>
           <span class="px-2 py-1 rounded-md">{{ props.task.start }}</span>
         </div>
